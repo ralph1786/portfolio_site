@@ -94,6 +94,52 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+@media (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media (min-width: 769) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 1.5rem; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../images/portrait_small.jpg");
+      width: 150px;
+      height: 150px; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "techno" "tech1" "tech2" "tech3" "tech4" "tech5" "tech6" "tech7";
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
+
 * {
   box-sizing: border-box; }
 
@@ -268,14 +314,42 @@ main {
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.7rem; }
+  grid-gap: 0.9rem; }
   .projects img {
     width: 100%;
-    border: 3px white solid; }
+    border: 3px white solid;
+    max-height: 155px; }
     .projects img:hover {
       opacity: 0.7;
       border-color: #1699e6;
       transition: all 0.75s ease-in; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #1699e6;
+    color: #000;
+    transition: all 0.75s ease-in; }
+
+.btn-dark {
+  background: black;
+  color: white;
+  text-align: center; }
+
+.btn-light {
+  background: #d0d7da;
+  color: #333;
+  text-align: center; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #353e43;
+  color: #fff;
+  height: 60px; }
 
 .boxes {
   display: flex;
@@ -295,73 +369,3 @@ main {
       color: #000; }
       .boxes div:hover span {
         color: #000; }
-
-.btn, .btn-dark, .btn-light {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #1699e6;
-    color: #000; }
-
-.btn-dark {
-  background: black;
-  color: white; }
-
-.btn-light {
-  background: #d0d7da;
-  color: #333; }
-
-#main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #353e43;
-  color: #fff;
-  height: 60px; }
-
-@media (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
-
-@media (min-width: 769) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr); } }
-
-@media (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 1.5rem; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../images/portrait_small.jpg");
-      width: 150px;
-      height: 150px; }
-  .about-info {
-    grid-template-areas: "bioimage" "bio" "techno" "tech1" "tech2" "tech3" "tech4" "tech5" "tech6" "tech7";
-    grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
-  .projects {
-    grid-template-columns: 1fr; } }
