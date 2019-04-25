@@ -1,91 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>About Me</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
         </div>
-        <nav class="menu">
-            <div class="menu-branding">
-                <div class="portrait"></div>
-            </div>
-            <ul class="menu-nav">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item current">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="work.html" class="nav-link">My Work</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Get In Touch</a>
-                </li>
-            </ul>
-        </nav>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item current">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main id="about">
-        <h1 class="lg-heading">
-            About
-            <span class="text-secondary">Me</span>
-        </h1>
-        <h2 class="sm-heading">
-            Let me introduce myself...
-        </h2>
-        <div class="about-info">
-           <img src="images/portrait.jpg" alt="Mike Smith" class="bio-image">
-           <div class="bio">
-               <h3 class="text-secondary">Bio</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti 
-                   autem non recusandae magnam repudiandae aspernatur illum quaerat vel 
-                   esse nulla doloremque nemo, dicta porro vitae voluptates neque totam 
-                   accusantium ratione ipsa minus delectus earum ducimus! Fuga, atque hic ad, 
-                   itaque molestiae tenetur consequuntur, quasi quibusdam eius veritatis 
-                   odit alias perspiciatis!</p>     
-           </div>
-           <div class="job job-1">
-               <h3>Acme Inc.</h3>
-               <h6>Backend Developer</h6>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, deserunt
-                  consequatur dolore asperiores ipsa officiis, eius id voluptas nisi, 
-                  odit reiciendis incidunt harum voluptatem necessitatibus?</p>
-           </div>
-           <div class="job job-2">
-                <h3>Innovate Design</h3>
-                <h6>Front End Developer</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, deserunt consequatur dolore asperiores ipsa officiis, eius
-                    id voluptas nisi, odit reiciendis incidunt harum voluptatem necessitatibus?</p>
-           </div>
-           <div class="job job-3">
-                <h3>Tech Solutions</h3>
-                <h6>Full Stack Developer</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, deserunt
-                  consequatur dolore asperiores ipsa officiis, eius id voluptas nisi, 
-                  odit reiciendis incidunt harum voluptatem necessitatibus?</p>
-           </div>
+      <h2 class="lg-heading">
+        About
+        <span class="text-secondary">Me</span>
+      </h2>
+      <h3 class="sm-heading">
+        Let me introduce myself...
+      </h3>
+      <div class="about-info">
+        <img src="images/portrait.jpg" alt="Mike Smith" class="bio-image" />
+        <div class="bio">
+          <h3 class="text-secondary">Bio</h3>
+          <p>
+            Full stack web developer with a passion for creating streamlined,
+            user-friendly, and responsive applications. Experience in Ruby on
+            Rails, JavaScript, React and CSS/SCSS. I discovered my passion for
+            web development through my innate curiosity in learning how things
+            work.</p> <p>Collaboration, organization and communication are skills in my
+            repertoire that will help any company tackle and solve an array of
+            problems. Additionally, I bring strong problem-solving skills that
+            have enabled me to find creative and innovative ways to solve
+            problems.</p>
+          </p>
         </div>
-        
+        <h3 class="technologies">Technologies</h3>
+        <div class="job tech-1">
+          <img src="./images/htmllogo.png" />
+          <p>HTML5</p>
+        </div>
+        <div class="job tech-2">
+          <img src="./images/csslogo.png"/>
+          <p>CSS3</p>
+        </div>
+        <div class="job tech-3">
+          <img src="./images/sasslogo.png"/>
+          <p>SASS</p>
+        </div>
+        <div class="job tech-4">
+            <img src="./images/jslogo.jpg" />
+            <p>JAVASCRIPT</p>
+        </div>
+        <div class="job tech-5">
+            <img src="./images/reduxlogo.jpg" />
+            <p>REDUX</p>
+        </div>
+        <div class="job tech-6">
+            <img src="./images/gitlogo.jpg" />
+            <p>GIT</p>
+        </div>
+        <div class="job tech-7">
+            <img src="./images/resdesignlogo.png" />
+            <p>RESPONSIVE DESIGN</p>
+        </div>
+      </div>
     </main>
 
     <footer id="main-footer">
-        Copyright &copy; 2018
+      Copyright &copy; 2019
     </footer>
     <script src="js/main.js"></script>
-</body>
+    <script>
+        const options = {
+            delay: 500,
+            easing: "ease-in",
+            duration: 700,
+            rotate: {
+                x: 5,
+                z: 5
+            }
+        }
 
+        ScrollReveal().reveal('.job', options);
+    </script>
+  </body>
 </html>

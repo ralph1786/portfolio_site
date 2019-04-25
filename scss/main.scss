@@ -1,193 +1,285 @@
-@import url('https://fonts.googleapis.com/css?family=Merienda');
-@import 'config';
-@import 'menu';
+@import "config";
+@import "menu";
 //Targets whole page.
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin techLogo {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  place-self: center;
 }
 
 body {
-    @include background();
-    background: $primary-color;
-    color: set-text-color($primary-color);
-    height: 100%;
-    margin: 0;
-    font-family: 'Merienda', cursive, 'Times New Roman', serif;
-    line-height: 1.5;
+  @include background();
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: $primary-font;
+  line-height: 1.5;
 }
 
 //Headings
 
-h1,h2,h3 {
-    margin: 0;
-    font-weight: 400;
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
 
-    &.lg-heading {
-        font-size: 6rem;
-    }
+  &.lg-heading {
+    font-size: 4rem;
+    font-family: $secondary-font;
+  }
 
-    &.sm-heading {
-        margin-bottom: 2rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
-    }
+  &.sm-heading {
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-}
-
-.text-secondary {
-    color: $secondary-color;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 
 main {
-    padding: 4rem;
-    min-height: calc(100vh - 60px); //This makes footer always stick to the bottom (60px is height of footer).
+  padding: 4rem;
+  min-height: calc(
+    100vh - 60px
+  ); //This makes footer always stick to the bottom (60px is height of footer).
 
-    .icons {
-       margin-top: 1rem;
-       a {
-           padding: 0.4rem;
-           
-           &:hover {
-               color: $secondary-color;
-               @include easeOut();
-           }
-       }
-    }
+  .icons {
+    margin-top: 1rem;
+    a {
+      padding: 0.4rem;
 
-    &#home {
-        overflow: hidden;
-        h1 {
-            margin-top: 20vh;
-        }
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
     }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+
+.text-secondary {
+  color: $secondary-color;
 }
 
 //Below starts the styling for the about page.
 .about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio bio"
+    "techno techno techno techno"
+    "tech1 tech2 tech3 tech4"
+    "tech5 tech6 tech7 tech8";
+  grid-template-columns: repeat(4, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+
+    .text-secondary {
+      font-family: $secondary-font;
+    }
+  }
+
+  .technologies {
+    grid-area: techno;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: $secondary-font;
+    color: $secondary-color;
+  }
+
+  .tech-1 {
+    grid-area: tech1;
     display: grid;
-    grid-gap: 30px;
-    grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
-    grid-template-columns: repeat(3, 1fr);
+    img {
+      @include techLogo();
+    }
+    p {
+      place-self: center;
+    }
+  }
 
-    .bio-image {
-        grid-area: bioimage;
-        margin: auto;
-        border-radius: 50%;
-        border: $secondary-color 3px solid;
+  .tech-2 {
+    grid-area: tech2;
+    display: grid;
+
+    img {
+      @include techLogo();
     }
 
-    .bio {
-        grid-area: bio;
-        font-size: 1.5rem;
+    p {
+      place-self: center;
     }
+  }
 
-    .job-1 {
-        grid-area: job1;
+  .tech-3 {
+    grid-area: tech3;
+    display: grid;
+    img {
+      @include techLogo();
     }
+    p {
+      place-self: center;
+    }
+  }
 
-    .job-2 {
-        grid-area: job2;
+  .tech-4 {
+    grid-area: tech4;
+    display: grid;
+    img {
+      @include techLogo();
     }
+    p {
+      place-self: center;
+    }
+  }
 
-    .job-3 {
-        grid-area: job3;
+  .tech-5 {
+    grid-area: tech5;
+    display: grid;
+    img {
+      @include techLogo();
     }
+    p {
+      place-self: center;
+    }
+  }
 
-    .job {
-        background: lighten($primary-color, 5);
-        padding: 0.5rem;
-        border-bottom: $secondary-color 5px solid;
+  .tech-6 {
+    grid-area: tech6;
+    display: grid;
+    img {
+      @include techLogo();
     }
+    p {
+      place-self: center;
+    }
+  }
+  .tech-7 {
+    grid-area: tech7;
+    display: grid;
+    img {
+      @include techLogo();
+    }
+    p {
+      place-self: center;
+    }
+  }
+
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
 }
 
 //Styling for work page.
 .projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
 
-    img {
-        width: 100%;
-        border: 3px white solid;
+  img {
+    width: 100%;
+    border: 3px white solid;
 
-        &:hover {
-            opacity: 0.7;
-            border-color: $secondary-color;
-            @include easeOut;
-        }
+    &:hover {
+      opacity: 0.7;
+      border-color: $secondary-color;
+      @include easeOut;
     }
+  }
 }
 
 //Contact page styling.
 .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
 
-    div {
-        font-size: 2rem;
-        border: 3px white solid;
-        padding: 1.5rem 2.5rem;
-        margin-bottom: 3rem;
-        @include easeOut;
+  div {
+    font-size: 2rem;
+    border: 3px white solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
 
-        &:hover {
-            padding: 0.5rem 1.5rem;
-            background: $secondary-color;
-            color: set-text-color($secondary-color);
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
 
-            span {
-                color: set-text-color($secondary-color);
-            }
-        }
+      span {
+        color: set-text-color($secondary-color);
+      }
     }
+  }
 }
 
 //Button styles
 .btn {
-    display: block;
-    padding: 0.5rem 1rem;
-    border: 0;
-    margin-bottom: 0.3rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
 
-    &:hover{
-        background: $secondary-color;
-        color: set-text-color($secondary-color);
-    }
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
 }
 
 .btn-dark {
-    @extend .btn;
-    background: darken($primary-color, 50);
-    color: white;
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: white;
 }
 
 .btn-light {
-    @extend .btn;
-    background: lighten($primary-color, 50);
-    color: #333;
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
 }
 
 #main-footer {
-    text-align: center;
-    padding: 1rem;
-    background: darken($primary-color, 10);
-    color: set-text-color($primary-color);
-    height: 60px;
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
 }
 
-@import 'mobile';
-
+@import "mobile";
