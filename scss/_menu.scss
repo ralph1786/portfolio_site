@@ -42,7 +42,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.98;
   visibility: hidden;
 
   &.show {
@@ -85,12 +85,17 @@
       transform: translate3d(0, 0, 0);
     }
 
-    .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../images/portrait.jpg");
-      border-radius: 50%;
-      border: solid 3px $secondary-color;
+    .logo {
+      font-size: 4.5em;
+      &-text {
+        color: white;
+        font-family: $logo-text-font;
+      }
+      &-tag {
+        color: $secondary-color;
+        font-family: $secondary-font;
+        margin: -16px;
+      }
     }
   }
 

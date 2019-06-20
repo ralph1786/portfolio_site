@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Merienda|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script&display=swap");
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -27,7 +28,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.98;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -43,24 +44,27 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #404c51;
+    background: #262525;
     list-style-type: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.75s ease-in; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #4b595f;
+    background: #333232;
     transform: translate3d(0, 100%, 0);
     transition: all 0.75s ease-in; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
-    .menu-branding .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../images/portrait.jpg");
-      border-radius: 50%;
-      border: solid 3px #1699e6; }
+    .menu-branding .logo {
+      font-size: 4.5em; }
+      .menu-branding .logo-text {
+        color: white;
+        font-family: "Dancing Script", cursive; }
+      .menu-branding .logo-tag {
+        color: #1699e6;
+        font-family: "Merienda", cursive, "Times New Roman", serif;
+        margin: -16px; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.75s ease-in;
@@ -124,10 +128,6 @@
   .menu-branding {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../images/portrait_small.jpg");
-      width: 150px;
-      height: 150px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "techno" "tech1" "tech2" "tech3" "tech4" "tech5" "tech6" "tech7";
     grid-template-columns: 1fr; }
@@ -144,7 +144,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #4b595f;
+  background: #333232;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -161,7 +161,7 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(75, 89, 95, 0.6);
+      background: rgba(51, 50, 50, 0.5);
       z-index: -1; }
 
 h1,
@@ -179,7 +179,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     margin-top: 1.5rem;
-    background: rgba(80, 94, 101, 0.5); }
+    background: rgba(56, 55, 55, 0.5); }
 
 a {
   color: white;
@@ -211,13 +211,18 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio bio" "techno techno techno techno" "tech1 tech2 tech3 tech4" "tech5 tech6 tech7 tech8";
+  grid-template-areas: "bioimage bio bio bio" "techno techno techno techno" "tech1 tech2 tech3 tech4" "tech5 tech6 tech7 tech8" "tech9 tech10 tech11 tech12";
   grid-template-columns: repeat(4, 1fr); }
-  .about-info .bio-image {
-    grid-area: bioimage;
+  .about-info .logo {
     margin: auto;
-    border-radius: 50%;
-    border: #1699e6 3px solid; }
+    font-size: 4.5em; }
+    .about-info .logo-text {
+      color: white;
+      font-family: "Dancing Script", cursive; }
+    .about-info .logo-tag {
+      color: #1699e6;
+      font-family: "Merienda", cursive, "Times New Roman", serif;
+      margin: -16px; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -229,85 +234,42 @@ main {
     font-size: 1.5rem;
     font-family: "Merienda", cursive, "Times New Roman", serif;
     color: #1699e6; }
-  .about-info .tech-1 {
+  .about-info .tech-1, .about-info .tech-2, .about-info .tech-3, .about-info .tech-4, .about-info .tech-5, .about-info .tech-6, .about-info .tech-7, .about-info .tech-8, .about-info .tech-9, .about-info .tech-10, .about-info .tech-11, .about-info .tech-12 {
     grid-area: tech1;
-    display: grid; }
-    .about-info .tech-1 img {
-      width: 200px;
-      height: 200px;
+    display: grid;
+    width: 200px; }
+    .about-info .tech-1 img, .about-info .tech-2 img, .about-info .tech-3 img, .about-info .tech-4 img, .about-info .tech-5 img, .about-info .tech-6 img, .about-info .tech-7 img, .about-info .tech-8 img, .about-info .tech-9 img, .about-info .tech-10 img, .about-info .tech-11 img, .about-info .tech-12 img {
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
-      border-radius: 10px;
+      border-radius: 7px;
       place-self: center; }
-    .about-info .tech-1 p {
+    .about-info .tech-1 p, .about-info .tech-2 p, .about-info .tech-3 p, .about-info .tech-4 p, .about-info .tech-5 p, .about-info .tech-6 p, .about-info .tech-7 p, .about-info .tech-8 p, .about-info .tech-9 p, .about-info .tech-10 p, .about-info .tech-11 p, .about-info .tech-12 p {
       place-self: center; }
   .about-info .tech-2 {
-    grid-area: tech2;
-    display: grid; }
-    .about-info .tech-2 img {
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      border-radius: 10px;
-      place-self: center; }
-    .about-info .tech-2 p {
-      place-self: center; }
+    grid-area: tech2; }
   .about-info .tech-3 {
-    grid-area: tech3;
-    display: grid; }
-    .about-info .tech-3 img {
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      border-radius: 10px;
-      place-self: center; }
-    .about-info .tech-3 p {
-      place-self: center; }
+    grid-area: tech3; }
   .about-info .tech-4 {
-    grid-area: tech4;
-    display: grid; }
-    .about-info .tech-4 img {
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      border-radius: 10px;
-      place-self: center; }
-    .about-info .tech-4 p {
-      place-self: center; }
+    grid-area: tech4; }
   .about-info .tech-5 {
-    grid-area: tech5;
-    display: grid; }
-    .about-info .tech-5 img {
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      border-radius: 10px;
-      place-self: center; }
-    .about-info .tech-5 p {
-      place-self: center; }
+    grid-area: tech5; }
   .about-info .tech-6 {
-    grid-area: tech6;
-    display: grid; }
-    .about-info .tech-6 img {
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      border-radius: 10px;
-      place-self: center; }
-    .about-info .tech-6 p {
-      place-self: center; }
+    grid-area: tech6; }
   .about-info .tech-7 {
-    grid-area: tech7;
-    display: grid; }
-    .about-info .tech-7 img {
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      border-radius: 10px;
-      place-self: center; }
-    .about-info .tech-7 p {
-      place-self: center; }
+    grid-area: tech7; }
+  .about-info .tech-8 {
+    grid-area: tech8; }
+  .about-info .tech-9 {
+    grid-area: tech9; }
+  .about-info .tech-10 {
+    grid-area: tech10; }
+  .about-info .tech-11 {
+    grid-area: tech11; }
+  .about-info .tech-12 {
+    grid-area: tech12; }
   .about-info .job {
-    background: #56666d;
+    background: #403f3f;
     padding: 0.5rem;
     border-bottom: #1699e6 5px solid; }
 
@@ -340,14 +302,14 @@ main {
   text-align: center; }
 
 .btn-light {
-  background: #d0d7da;
+  background: #b3b1b1;
   color: #333;
   text-align: center; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #353e43;
+  background: #191919;
   color: #fff;
   height: 60px; }
 

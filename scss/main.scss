@@ -7,10 +7,10 @@
 }
 
 @mixin techLogo {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 7px;
   place-self: center;
 }
 
@@ -93,14 +93,21 @@ main {
     "bioimage bio bio bio"
     "techno techno techno techno"
     "tech1 tech2 tech3 tech4"
-    "tech5 tech6 tech7 tech8";
+    "tech5 tech6 tech7 tech8"
+    "tech9 tech10 tech11 tech12";
   grid-template-columns: repeat(4, 1fr);
-
-  .bio-image {
-    grid-area: bioimage;
+  .logo {
     margin: auto;
-    border-radius: 50%;
-    border: $secondary-color 3px solid;
+    font-size: 4.5em;
+    &-text {
+      color: white;
+      font-family: $logo-text-font;
+    }
+    &-tag {
+      color: $secondary-color;
+      font-family: $secondary-font;
+      margin: -16px;
+    }
   }
 
   .bio {
@@ -123,6 +130,7 @@ main {
   .tech-1 {
     grid-area: tech1;
     display: grid;
+    width: 200px;
     img {
       @include techLogo();
     }
@@ -133,69 +141,54 @@ main {
 
   .tech-2 {
     grid-area: tech2;
-    display: grid;
-
-    img {
-      @include techLogo();
-    }
-
-    p {
-      place-self: center;
-    }
+    @extend .tech-1;
   }
 
   .tech-3 {
     grid-area: tech3;
-    display: grid;
-    img {
-      @include techLogo();
-    }
-    p {
-      place-self: center;
-    }
+    @extend .tech-1;
   }
 
   .tech-4 {
     grid-area: tech4;
-    display: grid;
-    img {
-      @include techLogo();
-    }
-    p {
-      place-self: center;
-    }
+    @extend .tech-1;
   }
 
   .tech-5 {
     grid-area: tech5;
-    display: grid;
-    img {
-      @include techLogo();
-    }
-    p {
-      place-self: center;
-    }
+    @extend .tech-1;
   }
 
   .tech-6 {
     grid-area: tech6;
-    display: grid;
-    img {
-      @include techLogo();
-    }
-    p {
-      place-self: center;
-    }
+    @extend .tech-1;
   }
   .tech-7 {
     grid-area: tech7;
-    display: grid;
-    img {
-      @include techLogo();
-    }
-    p {
-      place-self: center;
-    }
+    @extend .tech-1;
+  }
+  .tech-8 {
+    grid-area: tech8;
+    @extend .tech-1;
+  }
+
+  .tech-9 {
+    grid-area: tech9;
+    @extend .tech-1;
+  }
+
+  .tech-10 {
+    grid-area: tech10;
+    @extend .tech-1;
+  }
+
+  .tech-11 {
+    grid-area: tech11;
+    @extend .tech-1;
+  }
+  .tech-12 {
+    grid-area: tech12;
+    @extend .tech-1;
   }
 
   .job {

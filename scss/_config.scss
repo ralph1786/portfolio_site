@@ -1,14 +1,17 @@
+//To start compiling -> npm run sass
 //This file contains all the variables, mixins, functions and
-//media query mixins (used to add responsiveness to the website) that used throughout website.
+//media query mixins (used to add responsiveness to the website) that is used throughout website.
 @import url("https://fonts.googleapis.com/css?family=Merienda|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script&display=swap");
 
-$primary-color: rgb(75, 89, 95);
+$primary-color: rgb(51, 50, 50);
 $secondary-color: #1699e6;
 $show-home-image: true;
 $home-image: url(../images/portfolio-background.png);
-$background-opacity: 0.6;
+$background-opacity: 0.5;
 $primary-font: "Roboto", cursive, "Times New Roman", serif;
 $secondary-font: "Merienda", cursive, "Times New Roman", serif;
+$logo-text-font: "Dancing Script", cursive;
 //Below works like a function.
 @mixin easeOut {
   transition: all 0.75s ease-in;
