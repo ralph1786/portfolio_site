@@ -6,13 +6,13 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.75s ease-in; }
+  transition: all 0.6s ease-in; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
-    transition: all 0.75s ease-in; }
+    transition: all 0.6s ease-in; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -47,13 +47,13 @@
     background: #262525;
     list-style-type: none;
     transform: translate3d(0, -100%, 0);
-    transition: all 0.75s ease-in; }
+    transition: all 0.6s ease-in; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #333232;
     transform: translate3d(0, 100%, 0);
-    transition: all 0.75s ease-in; }
+    transition: all 0.6s ease-in; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .logo {
@@ -67,7 +67,7 @@
         margin: -16px; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 0.75s ease-in;
+    transition: all 0.6s ease-in;
     font-size: 1.5em; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
@@ -82,7 +82,7 @@
     font-weight: 300;
     color: #fff;
     text-decoration: none;
-    transition: all 0.75s ease-in; }
+    transition: all 0.6s ease-in; }
     .menu .nav-link:hover {
       color: #1699e6; }
 
@@ -199,7 +199,7 @@ main {
       padding: 0.4rem; }
       main .icons a:hover {
         color: #1699e6;
-        transition: all 0.75s ease-in; }
+        transition: all 0.6s ease-in; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -284,7 +284,7 @@ main {
     .projects img:hover {
       opacity: 0.7;
       border-color: #1699e6;
-      transition: all 0.75s ease-in; }
+      transition: all 0.6s ease-in; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -294,7 +294,7 @@ main {
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #1699e6;
     color: #000;
-    transition: all 0.75s ease-in; }
+    transition: all 0.6s ease-in; }
 
 .btn-dark {
   background: black;
@@ -305,6 +305,8 @@ main {
   background: #b3b1b1;
   color: #333;
   text-align: center; }
+  .btn-light:hover {
+    color: white; }
 
 #main-footer {
   text-align: center;
@@ -324,10 +326,14 @@ main {
     border: 3px white solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
-    transition: all 0.75s ease-in; }
+    transition: all 0.6s ease-in; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
       background: #1699e6;
       color: #000; }
       .boxes div:hover span {
         color: #000; }
+
+.item:hover {
+  transform: scale(1.05);
+  transition: transform 1.2s ease-in; }

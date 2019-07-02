@@ -139,56 +139,11 @@ main {
     }
   }
 
-  .tech-2 {
-    grid-area: tech2;
-    @extend .tech-1;
-  }
-
-  .tech-3 {
-    grid-area: tech3;
-    @extend .tech-1;
-  }
-
-  .tech-4 {
-    grid-area: tech4;
-    @extend .tech-1;
-  }
-
-  .tech-5 {
-    grid-area: tech5;
-    @extend .tech-1;
-  }
-
-  .tech-6 {
-    grid-area: tech6;
-    @extend .tech-1;
-  }
-  .tech-7 {
-    grid-area: tech7;
-    @extend .tech-1;
-  }
-  .tech-8 {
-    grid-area: tech8;
-    @extend .tech-1;
-  }
-
-  .tech-9 {
-    grid-area: tech9;
-    @extend .tech-1;
-  }
-
-  .tech-10 {
-    grid-area: tech10;
-    @extend .tech-1;
-  }
-
-  .tech-11 {
-    grid-area: tech11;
-    @extend .tech-1;
-  }
-  .tech-12 {
-    grid-area: tech12;
-    @extend .tech-1;
+  @for $x from 2 through 12 {
+    .tech-#{$x} {
+      grid-area: tech#{$x};
+      @extend .tech-1;
+    }
   }
 
   .job {
@@ -217,7 +172,7 @@ main {
   }
 }
 
-//Button styles
+//Button styling
 .btn {
   display: block;
   padding: 0.5rem 1rem;
@@ -243,6 +198,10 @@ main {
   background: lighten($primary-color, 50);
   color: #333;
   text-align: center;
+
+  &:hover {
+    color: white;
+  }
 }
 
 #main-footer {
@@ -277,5 +236,12 @@ main {
         color: set-text-color($secondary-color);
       }
     }
+  }
+}
+
+.item {
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 1.2s ease-in;
   }
 }
