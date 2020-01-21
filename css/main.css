@@ -168,7 +168,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio bio" "techno techno techno techno" "tech1 tech2 tech3 tech4" "tech5 tech6 tech7 tech8" "tech9 tech10 tech11 tech12" "tech13 tech14 tech15 tech16";
+  grid-template-areas: "bioimage bio bio bio" "techno techno techno techno" "tech1 tech2 tech3 tech4" "tech5 tech6 tech7 tech8" "tech9 tech10 tech11 tech12" "tech13 tech14 tech15 tech16" "tech17 tech17 tech17 tech17";
   grid-template-columns: repeat(4, 1fr); }
   .about-info .logo {
     margin: auto;
@@ -190,17 +190,17 @@ main {
     font-size: 1.5rem;
     font-family: "Merienda", cursive, "Times New Roman", serif;
     color: #1699e6; }
-  .about-info .tech-1, .about-info .tech-2, .about-info .tech-3, .about-info .tech-4, .about-info .tech-5, .about-info .tech-6, .about-info .tech-7, .about-info .tech-8, .about-info .tech-9, .about-info .tech-10, .about-info .tech-11, .about-info .tech-12, .about-info .tech-13, .about-info .tech-14, .about-info .tech-15, .about-info .tech-16 {
+  .about-info .tech-1, .about-info .tech-2, .about-info .tech-3, .about-info .tech-4, .about-info .tech-5, .about-info .tech-6, .about-info .tech-7, .about-info .tech-8, .about-info .tech-9, .about-info .tech-10, .about-info .tech-11, .about-info .tech-12, .about-info .tech-13, .about-info .tech-14, .about-info .tech-15, .about-info .tech-16, .about-info .tech-17 {
     grid-area: tech1;
     display: grid;
     width: 200px; }
-    .about-info .tech-1 img, .about-info .tech-2 img, .about-info .tech-3 img, .about-info .tech-4 img, .about-info .tech-5 img, .about-info .tech-6 img, .about-info .tech-7 img, .about-info .tech-8 img, .about-info .tech-9 img, .about-info .tech-10 img, .about-info .tech-11 img, .about-info .tech-12 img, .about-info .tech-13 img, .about-info .tech-14 img, .about-info .tech-15 img, .about-info .tech-16 img {
+    .about-info .tech-1 img, .about-info .tech-2 img, .about-info .tech-3 img, .about-info .tech-4 img, .about-info .tech-5 img, .about-info .tech-6 img, .about-info .tech-7 img, .about-info .tech-8 img, .about-info .tech-9 img, .about-info .tech-10 img, .about-info .tech-11 img, .about-info .tech-12 img, .about-info .tech-13 img, .about-info .tech-14 img, .about-info .tech-15 img, .about-info .tech-16 img, .about-info .tech-17 img {
       width: 100px;
       height: 100px;
       margin: 0 auto;
       border-radius: 7px;
       place-self: center; }
-    .about-info .tech-1 p, .about-info .tech-2 p, .about-info .tech-3 p, .about-info .tech-4 p, .about-info .tech-5 p, .about-info .tech-6 p, .about-info .tech-7 p, .about-info .tech-8 p, .about-info .tech-9 p, .about-info .tech-10 p, .about-info .tech-11 p, .about-info .tech-12 p, .about-info .tech-13 p, .about-info .tech-14 p, .about-info .tech-15 p, .about-info .tech-16 p {
+    .about-info .tech-1 p, .about-info .tech-2 p, .about-info .tech-3 p, .about-info .tech-4 p, .about-info .tech-5 p, .about-info .tech-6 p, .about-info .tech-7 p, .about-info .tech-8 p, .about-info .tech-9 p, .about-info .tech-10 p, .about-info .tech-11 p, .about-info .tech-12 p, .about-info .tech-13 p, .about-info .tech-14 p, .about-info .tech-15 p, .about-info .tech-16 p, .about-info .tech-17 p {
       place-self: center; }
   .about-info .tech-2 {
     grid-area: tech2; }
@@ -232,6 +232,8 @@ main {
     grid-area: tech15; }
   .about-info .tech-16 {
     grid-area: tech16; }
+  .about-info .tech-17 {
+    grid-area: tech17; }
   .about-info .job {
     background: #403f3f;
     padding: 0.5rem;
@@ -337,7 +339,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "techno" "tech1" "tech2" "tech3" "tech4" "tech5" "tech6" "tech7" "tech8" "tech9" "tech10" "tech11" "tech12" "tech13" "tech14" "tech15";
+    grid-template-areas: "bioimage" "bio" "techno" "tech1" "tech2" "tech3" "tech4" "tech5" "tech6" "tech7" "tech8" "tech9" "tech10" "tech11" "tech12" "tech13" "tech14" "tech15" "tech16" "tech17";
     grid-template-columns: 1fr; }
     .about-info .job {
       margin-left: 23%; }
