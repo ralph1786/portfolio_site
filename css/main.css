@@ -181,7 +181,8 @@ main {
     .about-info .logo-tag {
       color: #1699e6;
       font-family: "Merienda", cursive, "Times New Roman", serif;
-      margin: -16px; }
+/*       margin: -16px;  */
+}
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
